@@ -1,6 +1,6 @@
-# My_Portfolio
+# Bernard Quizon Jr - My_Portfolio
 
-Welcome to the Custom Software Engineering Senior Analyst portfolio.
+Welcome to the Custom Software Engineering Senior Analyst portfolio of Bernard Quizon Jr.
 
 This repository includes a professional portfolio page showcasing expertise in:
 
