@@ -4,15 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bernard Quizon Jr - Senior Software Engineer & Technical Architecture Lead Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="scroll-progress" class="scroll-progress"></div>
   <nav class="site-nav container">
     <a class="brand" href="#">Bernard Quizon Jr</a>
-    <div class="nav-links">
+    <div class="nav-toggle" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -20,23 +30,22 @@
   <header class="hero reveal">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Bernard Quizon Jr</p>
-        <p class="role">Senior Software Engineer & Technical Architecture Lead</p>
-        <h1>Specializing in full-stack development, secure authentication, and enterprise system integration.</h1>
+        <p class="role">Custom Software Engineering Sr Analyst & Technical Architecture Lead</p>
+        <h1 id="hero-title">Specializing in full-stack development, secure authentication, and enterprise system integration.</h1>
         <p class="lead">Experienced in React, TypeScript, Node.js, Angular, and Azure DevOps CI/CD, delivering high-quality releases from development to production. Proven track record in vulnerability remediation, database optimization, Azure AD B2C/SSO onboarding, CyberArk integration, and application lifecycle management.</p>
         <div class="hero-details">
           <div>
             <strong>Experience:</strong>
-            <span>10+ years in software engineering</span>
+            <span>5+ years in software engineering</span>
           </div>
           <div>
             <strong>Focus:</strong>
-            <span>Full-stack development, security, and enterprise integration</span>
+            <span>Security, enterprise integration, and full-stack delivery</span>
           </div>
         </div>
         <div class="buttons">
           <a href="#about" class="button primary">About Me</a>
-          <a href="#projects" class="button secondary">Projects</a>
+          <a href="#contact" class="button secondary">Contact</a>
         </div>
       </div>
       <div class="hero-image reveal">
@@ -50,12 +59,12 @@
       <div class="split">
         <div>
           <h2>About</h2>
-          <p>As a Senior Software Engineer and Technical Architecture Lead, I specialize in full-stack development, secure authentication, and enterprise system integration. I excel at delivering high-quality releases from development to production, with a focus on security, scalability, and performance.</p>
-          <p>My background includes vulnerability remediation, database optimization, Azure AD B2C/SSO onboarding, CyberArk integration, and application lifecycle management. I'm recognized for driving secure, scalable solutions that meet enterprise needs.</p>
+          <p>A Senior Software Engineer and Technical Architecture Lead specializing in full-stack development, secure authentication, and enterprise system integration. I build robust, scalable solutions that align development, security, and operational goals.</p>
+          <p>Experienced in React, TypeScript, Node.js, Angular, Azure DevOps CI/CD, AWS, and Azure. I have a proven record in vulnerability remediation, database optimization, Azure AD B2C/SSO onboarding, CyberArk integration, and application lifecycle management. I am known for driving secure, scalable enterprise solutions and improving delivery through technical leadership and cross-functional collaboration.</p>
         </div>
         <div>
           <ul class="highlights">
-            <li><strong>10+ years</strong> in software engineering and architecture</li>
+            <li><strong>5+ years</strong> in software engineering and architecture</li>
             <li><strong>Full-stack expertise</strong> with modern web technologies</li>
             <li><strong>Security-focused</strong> authentication and integration</li>
             <li><strong>CI/CD mastery</strong> using Azure DevOps</li>
@@ -64,25 +73,46 @@
       </div>
     </section>
 
-    <section id="skills" class="section dark reveal">
+    <section id="tools" class="section reveal">
       <div class="container">
-        <h2>Core Skills</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Frontend Development</h3>
-            <p>React, TypeScript, Angular for building responsive and interactive user interfaces.</p>
+        <h2>Tools & Technologies</h2>
+        <p class="section-subtitle">A modern stack for enterprise development, secure authentication, and cloud-native delivery.</p>
+        <div class="tech-grid">
+          <div class="tech-card"><i class="fab fa-react tech-icon"></i><p>React</p></div>
+          <div class="tech-card"><i class="fab fa-js-square tech-icon"></i><p>TypeScript</p></div>
+          <div class="tech-card"><i class="fab fa-js tech-icon"></i><p>JavaScript</p></div>
+          <div class="tech-card"><i class="fab fa-node-js tech-icon"></i><p>Node.js</p></div>
+          <div class="tech-card"><i class="fab fa-angular tech-icon"></i><p>Angular</p></div>
+          <div class="tech-card"><i class="fab fa-microsoft tech-icon"></i><p>Azure</p></div>
+          <div class="tech-card"><i class="fab fa-aws tech-icon"></i><p>AWS</p></div>
+          <div class="tech-card"><i class="fab fa-github tech-icon"></i><p>GitHub</p></div>
+          <div class="tech-card"><i class="fab fa-docker tech-icon"></i><p>Docker</p></div>
+          <div class="tech-card"><i class="fas fa-database tech-icon"></i><p>SQL</p></div>
+          <div class="tech-card"><i class="fas fa-code tech-icon"></i><p>C#</p></div>
+          <div class="tech-card"><i class="fas fa-leaf tech-icon"></i><p>Spring Boot</p></div>
+          <div class="tech-card"><i class="fas fa-shield-alt tech-icon"></i><p>CyberArk</p></div>
+          <div class="tech-card"><i class="fas fa-cogs tech-icon"></i><p>Azure DevOps</p></div>
+          <div class="tech-card"><i class="fas fa-rocket tech-icon"></i><p>Postman</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section dark reveal">
+      <div class="container">
+        <h2>Education & Certifications</h2>
+        <div class="split">
+          <div>
+            <h3>Education</h3>
+            <p>Bachelor of Science in Computer Science, 2016 – 2020</p>
+            <p>Eulogio “Amang” Rodriguez Institute of Science and Technology</p>
           </div>
-          <div class="card">
-            <h3>Backend Development</h3>
-            <p>Node.js for server-side logic, API development, and scalable backend solutions.</p>
-          </div>
-          <div class="card">
-            <h3>Security & Authentication</h3>
-            <p>Azure AD B2C, SSO onboarding, CyberArk integration for secure enterprise systems.</p>
-          </div>
-          <div class="card">
-            <h3>DevOps & CI/CD</h3>
-            <p>Azure DevOps for automated pipelines, deployment, and application lifecycle management.</p>
+          <div>
+            <h3>Certifications</h3>
+            <ul>
+              <li>AWS Cloud Practitioner</li>
+              <li>AWS Cloud Quest: Cloud Practitioner</li>
+              <li>SoloLearn SQL</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -92,82 +122,130 @@
       <h2>Professional Experience</h2>
       <div class="timeline">
         <article>
-          <h3>Senior Software Engineer & Technical Architecture Lead</h3>
-          <p class="meta">Enterprise Software Development | Full-Stack & Integration</p>
+          <h3>Custom Software Engineering Sr Analyst</h3>
+          <p class="meta">Accenture Inc Philippines – Mandaluyong City | January 2021 – April 2026</p>
           <ul>
-            <li>Led full-stack development projects using React, TypeScript, Node.js, and Angular.</li>
-            <li>Implemented secure authentication systems with Azure AD B2C and SSO onboarding.</li>
-            <li>Conducted vulnerability remediation and database optimization for improved performance.</li>
-            <li>Managed CI/CD pipelines with Azure DevOps for high-quality production releases.</li>
+            <li>Development Lead for Enablement Service Application using Postman, Azure DevOps, AWS, SNOW, Angular, TypeScript, Node.js, ESO, PAM, CyberArk.</li>
+            <li>Led bug fixes, vulnerability remediation, and feature enhancements for the Enablement Service Application.</li>
+            <li>Optimized backend database performance by improving SQL queries and backend connections.</li>
+            <li>Managed Azure DevOps CI/CD deployments across staging and production.</li>
+            <li>Conducted peer code reviews, validated staging releases, and ensured high-quality production deployments.</li>
           </ul>
         </article>
+
         <article>
-          <h3>Technical Architecture Lead</h3>
-          <p class="meta">System Integration & Security | Enterprise Solutions</p>
+          <h3>Development Lead / Technical Architecture Lead</h3>
+          <p class="meta">UKI Total Rewards and Vendor Application</p>
           <ul>
-            <li>Integrated CyberArk for secure credential management across enterprise applications.</li>
-            <li>Designed and implemented application lifecycle management processes.</li>
-            <li>Collaborated on enterprise system integrations for seamless data flow.</li>
-            <li>Delivered scalable solutions recognized for security and reliability.</li>
+            <li>Onboarded applications into Azure AD B2C and Enterprise SSO environments integrated with Azure and CyberArk.</li>
+            <li>Managed secret key rotations, XML certificate updates, and vulnerability remediation.</li>
+            <li>Performed domain and email whitelisting, onboarded vanity URLs, and decommissioned unused URLs.</li>
+            <li>Updated architectural diagrams and provided KT sessions for new team members.</li>
+            <li>Served as the primary technical escalation point for authentication and integration issues.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Custom Software Engineering Analyst</h3>
+          <p class="meta">Globe / GCASH</p>
+          <ul>
+            <li>Created structured flow diagrams to map API lifecycles from development through vendor sign-off.</li>
+            <li>Supported API demonstrations, validation, testing, and documentation for stakeholder requirements.</li>
+            <li>Delivered artifacts on tight timelines to support efficient review and approval cycles.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Application Name: Orica LTD</h3>
+          <p class="meta">AWS, Amazon Connect, Lambda, CloudWatch, SQS, DynamoDB, RDS, SNOW, TypeScript, Node.js, React</p>
+          <ul>
+            <li>Resolved security vulnerabilities and software defects across integrated AWS services.</li>
+            <li>Deployed fixes through development and production stages while ensuring stability.</li>
+            <li>Investigated agent-related issues across Amazon Connect, AWS Lambda, SQS, CloudWatch, and DNS.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Application Development Associate</h3>
+          <p class="meta">Contact Center and Webchat Projects</p>
+          <ul>
+            <li>Designed contact center and webchat solutions with Amazon Connect and AWS Lex.</li>
+            <li>Managed IAM roles and policies for secure AWS access.</li>
+            <li>Implemented REST APIs with API Gateway, Lambda proxy integration, and IAM authorization.</li>
+            <li>Produced technical designs and solution demonstrations for stakeholders.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Application Name: Accenture (Password Reset Unlock)</h3>
+          <p class="meta">Amazon Connect, Lambda, CloudWatch, SQS, DynamoDB, RDS, SNOW, TypeScript, Node.js, Postman</p>
+          <ul>
+            <li>Designed and implemented new IVR routing logic in Amazon Connect.</li>
+            <li>Updated deprecated Lambda runtimes and performed end-to-end testing.</li>
+            <li>Configured application connection strings to preserve historical call data visibility.</li>
+            <li>Mentored new resources on backend support and AWS integrations.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="section container reveal">
-      <h2>Selected Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Secure Authentication Portal</h3>
-          <p>Developed a full-stack authentication portal using React and Node.js, integrating Azure AD B2C for SSO and CyberArk for credential management.</p>
-          <p><strong>Impact:</strong> Enhanced security and user experience, reducing authentication issues by 40%.</p>
-        </div>
-        <div class="project-card">
-          <h3>Enterprise Integration Framework</h3>
-          <p>Built an integration layer connecting multiple enterprise systems, utilizing TypeScript and Azure DevOps for CI/CD and deployment.</p>
-          <p><strong>Impact:</strong> Streamlined data flow and improved operational efficiency across departments.</p>
-        </div>
-        <div class="project-card">
-          <h3>Performance Optimization Initiative</h3>
-          <p>Led database optimization and vulnerability remediation projects, resulting in faster response times and enhanced system security.</p>
-          <p><strong>Impact:</strong> Achieved 30% improvement in application performance and compliance.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="approach" class="section dark reveal">
+    <section id="achievements" class="section dark reveal">
       <div class="container">
-        <h2>Approach</h2>
-        <div class="split">
-          <div>
-            <h3>Develop</h3>
-            <p>Build robust full-stack applications with modern technologies and best practices.</p>
-          </div>
-          <div>
-            <h3>Secure</h3>
-            <p>Implement comprehensive security measures and authentication systems.</p>
-          </div>
-          <div>
-            <h3>Integrate</h3>
-            <p>Ensure seamless system integration and efficient application lifecycle management.</p>
-          </div>
-        </div>
+        <h2>Achievements</h2>
+        <ul class="highlights">
+          <li>Finalist, One CIO PH Ignite FY26 Sustainability Hackathon – “Pwedeng PWD”</li>
+          <li>Finalist, Hackathon 2025 – TASKI</li>
+          <li>Top 12 Lifehackers, Philam Life (2019)</li>
+          <li>Dean’s Lister, Academic Year 2018–2019</li>
+          <li>Student Creative Research – Sibol Award</li>
+          <li>Top Performer, Programmable Logic Circuit</li>
+          <li>Top 7 Outstanding Student, College of Arts and Sciences (2019)</li>
+        </ul>
       </div>
     </section>
 
     <section id="contact" class="section container reveal">
       <h2>Contact</h2>
-      <p>If you'd like to discuss full-stack development, security integration, or technical architecture, let's connect.</p>
-      <p>Email: <a href="mailto:bernard.quizon.jr@example.com">bernard.quizon.jr@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/bernard-quizon-jr" target="_blank" rel="noreferrer">linkedin.com/in/bernard-quizon-jr</a></p>
+      <div class="split">
+        <div>
+          <p>Get in touch to discuss opportunities, collaborations, or just to say hello!</p>
+          <div class="contact-info">
+            <p><strong>Phone:</strong> +63 951 723 0370</p>
+            <p><strong>Email:</strong> <a href="mailto:bernardquizonjr@gmail.com">bernardquizonjr@gmail.com</a></p>
+            <p><strong>Address:</strong> Al Rigga Dubai, United Arabs Emirates</p>
+          </div>
+        </div>
+        <div>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button primary">Send Message</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>Bernard Quizon Jr - Senior Software Engineer & Technical Architecture Lead Portfolio</p>
+      <p>Bernard Quizon Jr - Custom Software Engineering & Technical Architecture Lead Portfolio</p>
     </div>
   </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
   <script src="script.js"></script>
 </body>
 </html>
